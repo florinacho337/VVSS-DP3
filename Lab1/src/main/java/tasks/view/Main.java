@@ -7,9 +7,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
-import tasks.controller.Controller;
+import tasks.controller.MainController;
 import tasks.controller.Notificator;
-import tasks.model.ArrayTaskList;
+import tasks.Persistence.ArrayTaskList;
 import tasks.services.TaskIO;
 import tasks.services.TasksService;
 
@@ -40,7 +40,7 @@ public class Main extends Application {
             log.info("application start");
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
             Parent root = loader.load();//loader.load(this.getClass().getResource("/fxml/main.fxml"));
-            Controller ctrl= loader.getController();
+            MainController ctrl= loader.getController();
             service = new TasksService(savedTasksList);
 
             ctrl.setService(service);
