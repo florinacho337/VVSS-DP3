@@ -1,4 +1,4 @@
-package tasks.Persistence;
+package tasks.persistence;
 
 import javafx.collections.ObservableList;
 import tasks.model.Task;

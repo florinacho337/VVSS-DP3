@@ -1,4 +1,4 @@
-package tasks.Persistence;
+package tasks.persistence;
 
 
 import org.apache.log4j.Logger;
@@ -73,8 +73,10 @@ public class ArrayTaskList extends TaskList{
         }
         if (indexOfTaskToDelete >= 0){
             this.numberOfTasks--;
-            System.arraycopy(tasks, indexOfTaskToDelete+1,tasks,indexOfTaskToDelete,
-                    numberOfTasks-indexOfTaskToDelete+1);
+            // FIX C03: Corrected the length parameter in System.arraycopy by removing the +1
+            // which was causing potential undefined loop termination/array bounds issues
+            System.arraycopy(tasks, indexOfTaskToDelete+1, tasks, indexOfTaskToDelete,
+                    numberOfTasks-indexOfTaskToDelete);
             return true;
         }
         return false;

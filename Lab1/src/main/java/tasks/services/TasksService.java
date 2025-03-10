@@ -2,9 +2,9 @@ package tasks.services;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import tasks.Persistence.ArrayTaskList;
+import tasks.persistence.ArrayTaskList;
 import tasks.model.Task;
-import tasks.Persistence.TasksOperations;
+import tasks.persistence.TasksOperations;
 
 import java.util.Date;
 
@@ -26,13 +26,15 @@ public class TasksService {
         minutes = minutes % DateService.MINUTES_IN_HOUR;
         return formTimeUnit(hours) + ":" + formTimeUnit(minutes);//hh:MM
     }
+
+    // FIX C09: Simplified the formTimeUnit method to remove confusing parameter handling
+    // and redundant conditions for zero handling
     public String formTimeUnit(int timeUnit){
         StringBuilder sb = new StringBuilder();
-        if (timeUnit < 10) sb.append("0");
-        if (timeUnit == 0) sb.append("0");
-        else {
-            sb.append(timeUnit);
+        if (timeUnit < 10) {
+            sb.append("0");
         }
+        sb.append(timeUnit);
         return sb.toString();
     }
 
