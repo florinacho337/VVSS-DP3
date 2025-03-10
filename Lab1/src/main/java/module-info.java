@@ -10,4 +10,6 @@ module tasks {
     exports tasks.view;
     opens tasks.controller to javafx.fxml;
     exports tasks.controller;
+    exports tasks.Persistence;
+    opens tasks.Persistence to javafx.base;
 }
