@@ -141,8 +141,13 @@ public class NewEditController {
 
     @FXML
     public void saveChanges(){
+        // FIX C02: Fixed erroneous branching by adding proper task validation
+        // before attempting to add it to the list
         Task collectedFieldsTask = collectFieldsData();
-        if (incorrectInputMade) return;
+        if (incorrectInputMade || collectedFieldsTask == null) {
+            log.error("Cannot save task with incorrect input");
+            return;
+        }
 
         if (currentTask == null){//no task was chosen -> add button was pressed
             tasksList.add(collectedFieldsTask);

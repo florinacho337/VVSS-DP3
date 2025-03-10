@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import tasks.controller.MainController;
 import tasks.controller.Notificator;
-import tasks.Persistence.ArrayTaskList;
+import tasks.persistence.ArrayTaskList;
 import tasks.services.TaskIO;
 import tasks.services.TasksService;
 
@@ -27,7 +27,8 @@ public class Main extends Application {
     private static ClassLoader classLoader = Main.class.getClassLoader();
     public static File savedTasksFile = new File("data/tasks.txt");
 
-    private TasksService service = new TasksService(savedTasksList);//savedTasksList);
+    // FIX C06: Removed redundant initialization
+    private TasksService service;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -51,12 +52,16 @@ public class Main extends Application {
             primaryStage.show();
         }
         catch (IOException e){
+            // FIX C08: Improved error message processing to provide better user feedback
+            // instead of just printing stack trace
+            log.error("Error loading main.fxml: " + e.getMessage());
+            System.err.println("Failed to load application interface: " + e.getMessage());
+            // Still print stack trace for debugging
             e.printStackTrace();
-            log.error("error reading main.fxml");
         }
         primaryStage.setOnCloseRequest(we -> {
-                System.exit(0);
-            });
+            System.exit(0);
+        });
         new Notificator(FXCollections.observableArrayList(service.getObservableList())).start();
     }
 

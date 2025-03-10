@@ -1,4 +1,4 @@
-package tasks.Persistence;
+package tasks.persistence;
 
 import org.apache.log4j.Logger;
 import tasks.model.Task;
@@ -61,7 +61,10 @@ public class LinkedTaskList  extends TaskList {
         Node cursor = last;
         if (last.getTask().equals(task)) this.last = last.getLast();
         int tasksToCheck = size();
-        while (tasksToCheck > 0 && !task.equals(cursor.getTask())){
+
+        // FIX C12: Added proper null check for cursor to avoid NullPointerException
+        // and incorrect variable type handling
+        while (tasksToCheck > 0 && cursor != null && !task.equals(cursor.getTask())){
             cursor = cursor.getLast();
             tasksToCheck--;
         }
@@ -132,10 +135,6 @@ public class LinkedTaskList  extends TaskList {
             return last;
         }
 
-        private void setTask(Task task) {
-            this.task = task;
-        }
-
         private void setLast(Node last) {
             this.last = last;
         }
@@ -172,13 +171,5 @@ public class LinkedTaskList  extends TaskList {
                 "numberOfTasks=" + numberOfTasks +
                 ", last=" + last +
                 '}';
-    }
-    @Override
-    protected LinkedTaskList clone() throws CloneNotSupportedException {
-        LinkedTaskList tasks = new LinkedTaskList();
-        for (Task t : this){
-            tasks.add(t);
-        }
-        return tasks;
     }
 }

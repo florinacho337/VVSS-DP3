@@ -2,9 +2,9 @@ package tasks.services;
 
 import javafx.collections.ObservableList;
 import org.apache.log4j.Logger;
-import tasks.Persistence.LinkedTaskList;
+import tasks.persistence.LinkedTaskList;
 import tasks.model.Task;
-import tasks.Persistence.TaskList;
+import tasks.persistence.TaskList;
 import tasks.view.*;
 
 import java.io.*;
@@ -100,7 +100,9 @@ public class TaskIO {
         Task lastTask = tasks.getTask(tasks.size()-1);
         for (Task t : tasks){
             bufferedWriter.write(getFormattedTask(t));
-            bufferedWriter.write(t.equals(lastTask) ? ';' : '.');
+            // FIX C07: Using consistent output format with semicolons between all tasks
+            // to avoid output processing errors
+            bufferedWriter.write(';');
             bufferedWriter.newLine();
         }
         bufferedWriter.close();
@@ -162,47 +164,62 @@ public class TaskIO {
     }
     //
     private static int getIntervalFromText(String line){
-        int days, hours, minutes, seconds;
-        //[1 day 2 hours 46 minutes 40 seconds].
-        //[46 minutes 40 seconds].
-        //[46 minutes].
+        // FIX C10: Fixed loop counter logic that was causing potential infinite loops
+        // by using a clearer condition and index tracking approach
+        int days = 0, hours = 0, minutes = 0, seconds = 0;
         int start = line.lastIndexOf("[");
         int end = line.lastIndexOf("]");
-        String trimmed = line.substring(start+1, end);//returns interval without brackets -> 2 hours 46 minutes
-        days = trimmed.contains("day") ? 1 : 0;
-        hours = trimmed.contains("hour") ? 1 : 0;
-        minutes = trimmed.contains("minute") ? 1 : 0;
-        seconds = trimmed.contains("second") ? 1 : 0;
+        String trimmed = line.substring(start+1, end);
+
+        if (trimmed.contains("day")) days = 1;
+        if (trimmed.contains("hour")) hours = 1;
+        if (trimmed.contains("minute")) minutes = 1;
+        if (trimmed.contains("second")) seconds = 1;
 
         int[] timeEntities = new int[]{days, hours, minutes, seconds};
-        int i = 0, j = timeEntities.length-1;// positions of timeEntities available
-        while (i != 1 && j != 1) {
-            if (timeEntities[i] == 0) i++;
-            if (timeEntities[j] == 0) j--;
+
+        // Find first and last non-zero time entities
+        int firstIndex = -1, lastIndex = -1;
+        for (int i = 0; i < timeEntities.length; i++) {
+            if (timeEntities[i] == 1) {
+                if (firstIndex == -1) firstIndex = i;
+                lastIndex = i;
+            }
         }
 
+        // FIX C05: Improved subprogram invocation with better structure
+        // for parsing interval text segments
         String[] numAndTextValues = trimmed.split(" "); //{"46", "minutes", "40", "seconds"};
-        for (int k = 0 ; k < numAndTextValues.length; k+=2){
-            timeEntities[i] = Integer.parseInt(numAndTextValues[k]);
-            i++;
+        int currentTimeEntity = firstIndex;
+
+        for (int k = 0; k < numAndTextValues.length; k+=2) {
+            if (k+1 < numAndTextValues.length && isTimeEntityWord(numAndTextValues[k+1])) {
+                timeEntities[getTimeEntityIndex(numAndTextValues[k+1])] = Integer.parseInt(numAndTextValues[k]);
+            }
         }
 
         int result = 0;
-        for (int p = 0; p < timeEntities.length; p++){
-            if (timeEntities[p] != 0 && p == 0){
-                result+=secondsInDay*timeEntities[p];
-            }
-            if (timeEntities[p] != 0 && p == 1){
-                result+=secondsInHour*timeEntities[p];
-            }
-            if (timeEntities[p] != 0 && p == 2){
-                result+=secondsInMin*timeEntities[p];
-            }
-            if (timeEntities[p] != 0 && p == 3){
-                result+=timeEntities[p];
-            }
-        }
+        result += timeEntities[0] * secondsInDay;
+        result += timeEntities[1] * secondsInHour;
+        result += timeEntities[2] * secondsInMin;
+        result += timeEntities[3];
+
         return result;
+    }
+
+    // Helper method to identify time entity words (day, hour, etc.)
+    private static boolean isTimeEntityWord(String word) {
+        return word.startsWith("day") || word.startsWith("hour") ||
+                word.startsWith("minute") || word.startsWith("second");
+    }
+
+    // Helper method to get the index for a time entity word
+    private static int getTimeEntityIndex(String word) {
+        if (word.startsWith("day")) return 0;
+        if (word.startsWith("hour")) return 1;
+        if (word.startsWith("minute")) return 2;
+        if (word.startsWith("second")) return 3;
+        return -1;
     }
 
     private static Date getDateFromText (String line, boolean isStartTime) {
