@@ -1,0 +1,17 @@
+tasks/persistence/ArrayTaskList$ArrayTaskListIterator.class
+tasks/controller/MainController.class
+tasks/view/Main.class
+tasks/model/Task.class
+tasks/services/DateService.class
+tasks/persistence/ArrayTaskList.class
+tasks/services/TasksService.class
+tasks/controller/TaskInfoController.class
+tasks/controller/NewEditController.class
+tasks/controller/Notificator.class
+tasks/persistence/LinkedTaskList$LinkedTaskListIterator.class
+tasks/services/TaskIO.class
+module-info.class
+tasks/persistence/TaskList.class
+tasks/persistence/TasksOperations.class
+tasks/persistence/LinkedTaskList.class
+tasks/persistence/LinkedTaskList$Node.class

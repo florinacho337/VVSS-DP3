@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7cd43646-4509-4d7e-9101-6875f4bda5b8" name="Changes" comment="lab1 final">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VVSS-DP3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/01_Tasks.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/Lab01/ClassDiagramTasks_v2.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/Lab01/Lab01_ReviewReport.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/Lab01/RequirementsTasks_v2.0.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/Lab02/Lab02_BBT_TCs_Form.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/initial/ClassDiagramDepTasks_v1.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/initial/ClassDiagramTasks_v1.0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/initial/RequirementsTasks_v1.0.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/initial/RequirementsTasks_v1.0.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/Docs/initial/diagram.uml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/data/tasks.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/logs/task-manager-log.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/controller/NewEditController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/controller/Notificator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/controller/TaskInfoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/model/Task.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/persistence/ArrayTaskList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/persistence/LinkedTaskList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/persistence/TaskList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/persistence/TasksOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/services/DateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/services/TaskIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/services/TasksService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/java/tasks/view/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/resources/fxml/field-validator.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/resources/fxml/main.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/resources/fxml/new-edit-task.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/resources/fxml/task-info.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/main/resources/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/test/java/tasks/model/TaskCreationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/test/java/tasks/model/TaskTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1/src/test/java/tasks/services/DateServiceTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="florin/arhitectural-fixes" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;florinacho337&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/florinacho337/VVSS-DP3.git&quot;,
+    &quot;accountId&quot;: &quot;aaf718d7-b1a3-465e-bca6-bdb46de4fb28&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2tWfmP5Qlrjf4MLS8fFLcmOMv5j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.Tasks [clean].executor": "Run",
+    "Maven.Tasks [install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/florin/FMI/VVSS-DP3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tasks.model" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7cd43646-4509-4d7e-9101-6875f4bda5b8" name="Changes" comment="" />
+      <created>1740472910876</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740472910876</updated>
+      <workItem from="1740472912618" duration="1152000" />
+      <workItem from="1741417210485" duration="5961000" />
+      <workItem from="1741423271241" duration="85000" />
+      <workItem from="1741682154197" duration="1282000" />
+      <workItem from="1743700209252" duration="5590000" />
+      <workItem from="1743707219745" duration="254000" />
+      <workItem from="1743707502320" duration="60000" />
+    </task>
+    <task id="LOCAL-00001" summary="architecture fixes done">
+      <option name="closed" value="true" />
+      <created>1741423169671</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741423169671</updated>
+    </task>
+    <task id="LOCAL-00002" summary="architecture fixes done">
+      <option name="closed" value="true" />
+      <created>1741423350867</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741423350867</updated>
+    </task>
+    <task id="LOCAL-00003" summary="lab1 final">
+      <option name="closed" value="true" />
+      <created>1741682486180</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741682486180</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lab1 final">
+      <option name="closed" value="true" />
+      <created>1741682938824</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1741682938824</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="architecture fixes done" />
+    <MESSAGE value="lab1 final" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab1 final" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
