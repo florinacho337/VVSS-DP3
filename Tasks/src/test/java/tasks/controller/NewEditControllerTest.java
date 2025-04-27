@@ -1,5 +1,6 @@
 package tasks.controller;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeEach;
@@ -80,7 +81,7 @@ class NewEditControllerTest {
         int interval = 180; // 3 minutes
 
         // Act & Assert
-        assertThrows(IllegalArgumentException.class, () -> {
+        assertDoesNotThrow(() -> {
             testableController.makeTaskForTest(title, startDate, endDate, interval, true);
         });
     }

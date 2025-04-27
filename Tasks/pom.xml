@@ -115,7 +115,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.1</version>
                 <configuration>
-                    <!--                <failIfNoTests>false</failIfNoTests>-->
+                    <argLine>
+                        --add-opens tasks/tasks.controller=ALL-UNNAMED
+                        --add-opens tasks/tasks.model=ALL-UNNAMED
+                        --add-opens tasks/tasks.persistence=ALL-UNNAMED
+                        --add-opens tasks/tasks.services=ALL-UNNAMED
+                    </argLine>
                 </configuration>
             </plugin>
             <plugin>

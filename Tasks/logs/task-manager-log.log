@@ -34,3 +34,14 @@
 2025-04-07 18:59:40 ERROR Task:26 - time below bound
 2025-04-08 00:01:32 ERROR Task:40 - interval < than 1
 2025-04-08 00:01:32 ERROR Task:40 - interval < than 1
+2025-04-27 23:29:28 INFO  Main:36 - saved data reading
+2025-04-27 23:29:28 INFO  Main:41 - application start
+2025-04-27 23:29:28 INFO  MainController:74 - Main controller initializing
+2025-04-27 23:33:02 ERROR Task:40 - interval < than 1
+2025-04-27 23:33:02 ERROR Task:40 - interval < than 1
+2025-04-27 23:42:55 ERROR Task:40 - interval < than 1
+2025-04-27 23:42:55 ERROR Task:40 - interval < than 1
+2025-04-27 23:51:25 ERROR Task:40 - interval < than 1
+2025-04-27 23:51:25 ERROR Task:40 - interval < than 1
+2025-04-27 23:52:57 ERROR Task:40 - interval < than 1
+2025-04-27 23:52:57 ERROR Task:40 - interval < than 1
